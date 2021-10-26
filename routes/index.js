@@ -1,10 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const home = require('./modules/home')
-const { authenticator } = require('../middleware/auth')
-const auth = require('./modules/auth')
+const records = require('./modules/records')
 
-router.use('/', auth, home)
+router.use('/record', records)
 
 
 module.exports = router
