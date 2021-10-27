@@ -1,5 +1,5 @@
 {
-  "recordSeed" : [
+  "recordSeed": [
     {
       "id": 1,
       "name": "午餐",
