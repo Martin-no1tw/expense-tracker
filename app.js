@@ -9,6 +9,7 @@ const routes = require('./routes')
 
 require('./config/mongoose')
 
+app.use(bodyParser.urlencoded({ extended: true }))
 app.engine('hbs', exhbs({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engin', 'hbs')
 
