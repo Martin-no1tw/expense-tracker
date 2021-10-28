@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
-const MONGODN_URI = ('mongodb://localhost/pocket-tracker')
+const MONGODB_URI = process.env.MONGODB_URI
 
-mongoose.connect(MONGODN_URI)
+mongoose.connect(MONGODB_URI)
 
 const db = mongoose.connection
 

@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const recordSchema = new Schema({
   id: {
-    tyoe: Number,
+    type: Number,
   },
   name: {
     type: String,
@@ -16,9 +16,9 @@ const recordSchema = new Schema({
     type: Number,
     require: true
   },
-  date: {
+  category: {
     type: String,
-    require: true
+    required: true
   },
   categoryld: {
     type: Schema.Types.ObjectId,
