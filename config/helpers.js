@@ -16,4 +16,7 @@ module.exports = {
 
     return sum // return total
   }, // 設定日期格式helper
+  dateFormate: function (date) {
+    return date.toJSON().substring(0, 10)
+  }
 }
