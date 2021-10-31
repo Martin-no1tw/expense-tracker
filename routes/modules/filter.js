@@ -7,7 +7,6 @@ const mongoose = require('mongoose')
 //搜尋類別
 router.post('/', (req, res) => {
   const userId = req.user._id
-  //
   const categoryId = req.body.categoryId ? mongoose.Types.ObjectId(req.body.categoryId) : { $ne: '' }
 
   return Record.aggregate([
@@ -21,7 +20,8 @@ router.post('/', (req, res) => {
     .then(records => {
       //將catetory找出的資料跟record得出的資料進行配對
       //如果record.categoryId跟category._id相符合，顯示相對應的icon
-      Category.find()
+      Category
+        .find()
         .lean()
         .then(categories => {
           categories.forEach(category => {
