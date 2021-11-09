@@ -5,7 +5,6 @@
       <form action="/filter" method="POST" class="form-group row">
         <select class="form-control-lg col-8" id="exampleFormControlSelect1 category"
           placeholder="Readonly input here..." name="categoryId">
-          <option value="">請選擇類別</option>
           <option value="">全部</option>
           {{#each categories}}
           <option value="{{this._id}}" {{#if this.selected}}selected{{/if}}>{{this.name}}</option>
